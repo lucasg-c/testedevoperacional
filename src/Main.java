@@ -177,7 +177,7 @@ public class Main {
                                         Customer customerLogado = customers.stream()
                                                 .filter(x -> x.getUsername().equals(loggedUser.getUsername()))
                                                 .toList().get(0);
-                                        Purchase purchase = criarVenda(carrinho, companyEscolhida, customerLogado, purchases);
+                                        Purchase purchase = makePurchase(carrinho, companyEscolhida, customerLogado, purchases);
                                         System.out.println("Total: R$" + purchase.getCost());
                                         System.out.println("************************************************************\n");
                                         carrinho.clear();
@@ -220,7 +220,7 @@ public class Main {
         } while (true);
     }
 
-    public static Purchase criarVenda(List<Product> carrinho, Company company, Customer customer, List<Purchase> purchases) {
+    public static Purchase makePurchase(List<Product> carrinho, Company company, Customer customer, List<Purchase> purchases) {
         Double total = carrinho.stream().mapToDouble(Product::getPrice).sum();
         carrinho.forEach(product -> product.setQuantity(product.getQuantity() - 1));
 
