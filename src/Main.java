@@ -98,13 +98,13 @@ public class Main {
                                                 });
                                                 System.out.println("Total Venda: R$" + purchase.getCost());
                                                 System.out.println("Total Taxa a ser paga: R$" + purchase.getSystemComission());
-                                                System.out.println("Total Líquido  para empresa"
+                                                System.out.println("Total Líquido  para empresa: R$"
                                                         + (purchase.getCost() - purchase.getSystemComission()));
                                                 System.out.println("************************************************************");
                                             }
 
                                         });
-                                        System.out.println("Saldo Empresa: " + loggedUser.getCompany().getBalance());
+                                        System.out.println("Saldo da Empresa R$: " + loggedUser.getCompany().getBalance());
                                         System.out.println("************************************************************\n");
                                     }
                                     case 2 -> {
