@@ -79,7 +79,7 @@ public class Main {
                         vendas.stream().forEach(venda -> {
                             if (venda.getEmpresa().getId().equals(usuarioLogado.getEmpresa().getId())) {
                                 System.out.println("************************************************************");
-                                System.out.println("Venda de código: " + venda.getCódigo() + " no CPF "
+                                System.out.println("Venda de código: " + venda.getCodigo() + " no CPF "
                                         + venda.getCliente().getCpf() + ": ");
                                 venda.getItens().stream().forEach(x -> {
                                     System.out.println(x.getId() + " - " + x.getNome() + "    R$" + x.getPreco());
@@ -175,7 +175,7 @@ public class Main {
                         vendas.stream().forEach(venda -> {
                             if (venda.getCliente().getUsername().equals(usuarioLogado.getUsername())) {
                                 System.out.println("************************************************************");
-                                System.out.println("Compra de código: " + venda.getCódigo() + " na empresa "
+                                System.out.println("Compra de código: " + venda.getCodigo() + " na empresa "
                                         + venda.getEmpresa().getNome() + ": ");
                                 venda.getItens().stream().forEach(x -> {
                                     System.out.println(x.getId() + " - " + x.getNome() + "    R$" + x.getPreco());
@@ -208,7 +208,7 @@ public class Main {
         Double totalLiquido = total - comissaoSistema;
         empresa.setSaldo(empresa.getSaldo() + totalLiquido);
 
-        int idVenda = vendas.isEmpty() ? 1 : vendas.get(vendas.size() - 1).getCódigo() + 1;
+        int idVenda = vendas.isEmpty() ? 1 : vendas.get(vendas.size() - 1).getCodigo() + 1;
         Venda venda = new Venda(idVenda, carrinho.stream().toList(), total, comissaoSistema, empresa, cliente);
         vendas.add(venda);
 
