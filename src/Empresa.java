@@ -58,5 +58,4 @@ public class Empresa {
 	public void setSaldo(Double saldo) {
 		this.saldo = saldo;
 	}
-
 }

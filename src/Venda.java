@@ -25,8 +25,6 @@ public class Venda {
 	public Integer getCódigo() {
 		return código;
 	}
-	
-	
 
 	public Empresa getEmpresa() {
 		return empresa;
@@ -71,5 +69,4 @@ public class Venda {
 	public void setComissaoSistema(Double comissaoSistema) {
 		this.comissaoSistema = comissaoSistema;
 	}
-
 }

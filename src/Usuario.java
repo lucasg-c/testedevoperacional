@@ -60,5 +60,4 @@ public class Usuario {
 	public void setEmpresa(Empresa empresa) {
 		this.empresa = empresa;
 	}
-
 }

@@ -19,8 +19,6 @@ public class Produto {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 
 	public Integer getId() {
 		return id;
@@ -61,5 +59,4 @@ public class Produto {
 	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
-
 }

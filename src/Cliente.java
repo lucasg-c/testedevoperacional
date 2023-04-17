@@ -16,7 +16,6 @@ public class Cliente {
 	public String getCpf() {
 		return cpf;
 	}
-	
 
 	public String getUsername() {
 		return username;
@@ -45,5 +44,4 @@ public class Cliente {
 	public void setIdade(Integer idade) {
 		this.idade = idade;
 	}
-
 }
