@@ -7,8 +7,8 @@ public class Main {
         List<Product> cart = new ArrayList<Product>();
         List<Purchase> purchases = new ArrayList<Purchase>();
 
-        Company company = new Company(2, "SafeWay Padaria", "30021423000159", 0.15, 0.0);
         Company company2 = new Company(1, "Level Varejo", "53239160000154", 0.05, 0.0);
+        Company company = new Company(2, "SafeWay Padaria", "30021423000159", 0.15, 0.0);
         Company company3 = new Company(3, "SafeWay Restaurante", "41361511000116", 0.20, 0.0);
 
         Product product = new Product(1, "Pão Frances", 5, 3.50, company);
