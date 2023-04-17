@@ -1,0 +1,20 @@
+# Compiled class file
+*.class
+bin/
+
+# Log file
+*.log
+
+# IntelliJ specific files
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse specific files
+.project
+.classpath
+.settings/
+
+# Maven specific files
+target/
