@@ -75,7 +75,7 @@ public class Main {
                     escolha = sc.nextInt();
 
                     switch (escolha) {
-                        case 1: {
+                        case 1:
                             System.out.println();
                             System.out.println("************************************************************");
                             System.out.println("VENDAS EFETUADAS");
@@ -97,8 +97,7 @@ public class Main {
                             });
                             System.out.println("Saldo Empresa: " + usuarioLogado.getEmpresa().getSaldo());
                             System.out.println("************************************************************");
-                        }
-                        case 2: {
+                        case 2:
                             System.out.println();
                             System.out.println("************************************************************");
                             System.out.println("MEUS PRODUTOS");
@@ -115,10 +114,8 @@ public class Main {
                             });
                             System.out.println("Saldo Empresa: " + usuarioLogado.getEmpresa().getSaldo());
                             System.out.println("************************************************************\n");
-                        }
-                        case 0: {
+                        case 0:
                             break;
-                        }
                     }
                 } while (escolha != 0);
 
@@ -131,33 +128,34 @@ public class Main {
                     System.out.println("1 - Relizar Compras");
                     System.out.println("2 - Ver Compras");
                     System.out.println("0 - Deslogar");
-                    System.out.println();
                     System.out.print("Opção: ");
                     escolha = sc.nextInt();
 
                     switch (escolha) {
-                        case 1: {
-                            System.out.println("Para realizar uma compra, escolha a empresa onde deseja comprar: ");
+                        case 1:
+                            System.out.println("\nPara realizar uma compra, escolha a empresa onde deseja comprar: ");
                             empresas.stream().forEach(x -> {
                                 System.out.println(x.getId() + " - " + x.getNome());
                             });
+                            System.out.print("Número da empresa escolhida: ");
                             Integer escolhaEmpresa = sc.nextInt();
-                            Integer escolhaProduto = -1;
+                            int escolhaProduto;
                             do {
-                                System.out.println("Escolha os seus produtos: ");
+                                System.out.println("\nEscolha os seus produtos ou finalize a compra: ");
                                 produtos.stream().forEach(x -> {
                                     if (x.getEmpresa().getId().equals(escolhaEmpresa)) {
                                         System.out.println(x.getId() + " - " + x.getNome());
                                     }
                                 });
                                 System.out.println("0 - Finalizar compra");
+                                System.out.print("Número da opção escolhida: ");
                                 escolhaProduto = sc.nextInt();
                                 for (Produto produtoSearch : produtos) {
                                     if (produtoSearch.getId().equals(escolhaProduto))
                                         carrinho.add(produtoSearch);
                                 }
                             } while (escolhaProduto != 0);
-                            System.out.println("************************************************************");
+                            System.out.println("\n************************************************************");
                             System.out.println("Resumo da compra: ");
                             carrinho.stream().forEach(x -> {
                                 if (x.getEmpresa().getId().equals(escolhaEmpresa)) {
@@ -173,28 +171,25 @@ public class Main {
                             System.out.println("Total: R$" + venda.getValor());
                             System.out.println("************************************************************");
                             carrinho.clear();
-                        }
-                        case 2: {
+                        case 2:
                             System.out.println();
                             System.out.println("************************************************************");
                             System.out.println("COMPRAS EFETUADAS");
-                            vendas.stream().forEach(venda -> {
-                                if (venda.getCliente().getUsername().equals(usuarioLogado.getUsername())) {
+                            vendas.stream().forEach(v -> {
+                                if (v.getCliente().getUsername().equals(usuarioLogado.getUsername())) {
                                     System.out.println("************************************************************");
-                                    System.out.println("Compra de código: " + venda.getCodigo() + " na empresa "
-                                            + venda.getEmpresa().getNome() + ": ");
-                                    venda.getItens().stream().forEach(x -> {
+                                    System.out.println("Compra de código: " + v.getCodigo() + " na empresa "
+                                            + v.getEmpresa().getNome() + ": ");
+                                    v.getItens().stream().forEach(x -> {
                                         System.out.println(x.getId() + " - " + x.getNome() + "    R$" + x.getPreco());
                                     });
-                                    System.out.println("Total: R$" + venda.getValor());
+                                    System.out.println("Total: R$" + v.getValor());
                                     System.out.println("************************************************************");
                                 }
                             });
                             System.out.println("************************************************************\n");
-                        }
-                        case 0: {
+                        case 0:
                             break;
-                        }
                     }
                 } while (escolha != 0);
             } else {
