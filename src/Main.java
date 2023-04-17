@@ -205,6 +205,7 @@ public class Main {
 
 	public static Venda criarVenda(List<Produto> carrinho, Empresa empresa, Cliente cliente, List<Venda> vendas) {
 		Double total = carrinho.stream().mapToDouble(Produto::getPreco).sum();
+		carrinho.forEach(produto -> produto.setQuantidade(produto.getQuantidade()-1));
 		Double comissaoSistema = total * empresa.getTaxa();
 		Double totalLiquido = total - comissaoSistema;
 		int idVenda = vendas.isEmpty() ? 1 : vendas.get(vendas.size() - 1).getCódigo() + 1;
