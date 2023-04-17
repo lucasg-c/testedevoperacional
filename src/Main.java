@@ -68,6 +68,8 @@ public class Main {
                 System.out.println("1 - Listar vendas");
                 System.out.println("2 - Ver produtos");
                 System.out.println("0 - Deslogar");
+                System.out.println();
+                System.out.print("Opção: ");
                 Integer escolha = sc.nextInt();
 
                 switch (escolha) {
@@ -117,12 +119,11 @@ public class Main {
                         executar(clientes, empresas, produtos, carrinho, vendas, autenticacao);
                     }
                     case 0: {
-                        executar(clientes, empresas, produtos, carrinho, vendas, autenticacao);
-
+                        break;
                     }
                 }
 
-            } else {
+            } else if (usuarioLogado.isCliente()) {
                 System.out.println("Olá, " + usuarioLogado.getCliente().getNome());
                 System.out.println();
 
@@ -130,6 +131,8 @@ public class Main {
                 System.out.println("1 - Relizar Compras");
                 System.out.println("2 - Ver Compras");
                 System.out.println("0 - Deslogar");
+                System.out.println();
+                System.out.print("Opção: ");
                 Integer escolha = sc.nextInt();
                 switch (escolha) {
                     case 1: {
@@ -192,11 +195,12 @@ public class Main {
                         executar(clientes, empresas, produtos, carrinho, vendas, autenticacao);
                     }
                     case 0: {
-                        executar(clientes, empresas, produtos, carrinho, vendas, autenticacao);
-
+                        break;
                     }
 
                 }
+            } else {
+                System.out.println("Olá, " + usuarioLogado.getUsername());
             }
 
         } else
