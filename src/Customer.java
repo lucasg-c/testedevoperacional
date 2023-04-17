@@ -1,18 +1,18 @@
 
-public class Cliente {
+public class Customer {
 	private Integer id;
 	private String cpf;
-	private String nome;
+	private String name;
 	private String username;
-	private Integer idade;
+	private Integer age;
 
-	public Cliente(Integer id, String cpf, String nome, String username, Integer idade) {
+	public Customer(Integer id, String cpf, String name, String username, Integer age) {
 		super();
 		this.id = id;
 		this.cpf = cpf;
-		this.nome = nome;
+		this.name = name;
 		this.username = username;
-		this.idade = idade;
+		this.age = age;
 	}
 
 	public Integer getId() {
@@ -39,19 +39,19 @@ public class Cliente {
 		this.cpf = cpf;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public Integer getIdade() {
-		return idade;
+	public Integer getAge() {
+		return age;
 	}
 
-	public void setIdade(Integer idade) {
-		this.idade = idade;
+	public void setAge(Integer age) {
+		this.age = age;
 	}
 }
