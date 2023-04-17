@@ -40,11 +40,11 @@ public class Main {
 
         Authentication authentication = new Authentication(users);
 
-        executar(customers, companies, products, cart, purchases, authentication);
+        execute(customers, companies, products, cart, purchases, authentication);
     }
 
-    public static void executar(List<Customer> customers, List<Company> companies,
-                                List<Product> products, List<Product> carrinho, List<Purchase> purchases, Authentication authentication) {
+    public static void execute(List<Customer> customers, List<Company> companies,
+                               List<Product> products, List<Product> carrinho, List<Purchase> purchases, Authentication authentication) {
         Scanner sc = new Scanner(System.in);
         int initialMenu;
 
