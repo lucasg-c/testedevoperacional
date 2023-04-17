@@ -54,18 +54,17 @@ public class Main {
         System.out.print("Senha: ");
         String senha = sc.next();
 
-
-//        List<Usuario> usuariosSearch = usuarios.stream().filter(x -> x.getUsername().equals(username))
-//                .collect(Collectors.toList());
-
-        //Usuario usuarioLogado = usuariosSearch.get(0);
         Optional<Usuario> usuario = autenticacao.autentica(username, senha);
 
         if (usuario.isPresent()) {
             Usuario usuarioLogado = usuario.get();
+            System.out.println("Login bem sucedido");
 
-            System.out.println("Escolha uma opção para iniciar");
             if (usuarioLogado.isEmpresa()) {
+                System.out.println("Olá, " + usuarioLogado.getEmpresa().getNome());
+                System.out.println();
+
+                System.out.println("Escolha uma opção para iniciar");
                 System.out.println("1 - Listar vendas");
                 System.out.println("2 - Ver produtos");
                 System.out.println("0 - Deslogar");
@@ -124,6 +123,10 @@ public class Main {
                 }
 
             } else {
+                System.out.println("Olá, " + usuarioLogado.getCliente().getNome());
+                System.out.println();
+
+                System.out.println("Escolha uma opção para iniciar");
                 System.out.println("1 - Relizar Compras");
                 System.out.println("2 - Ver Compras");
                 System.out.println("0 - Deslogar");
