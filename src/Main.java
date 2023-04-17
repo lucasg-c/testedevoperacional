@@ -41,10 +41,10 @@ public class Main {
 
         Autenticacao autenticacao = new Autenticacao(usuarios);
 
-        executar(usuarios, clientes, empresas, produtos, carrinho, vendas, autenticacao);
+        executar(clientes, empresas, produtos, carrinho, vendas, autenticacao);
     }
 
-    public static void executar(List<Usuario> usuarios, List<Cliente> clientes, List<Empresa> empresas,
+    public static void executar(List<Cliente> clientes, List<Empresa> empresas,
                                 List<Produto> produtos, List<Produto> carrinho, List<Venda> vendas, Autenticacao autenticacao) {
         Scanner sc = new Scanner(System.in);
 
@@ -94,7 +94,7 @@ public class Main {
                         System.out.println("Saldo Empresa: " + usuarioLogado.getEmpresa().getSaldo());
                         System.out.println("************************************************************");
 
-                        executar(usuarios, clientes, empresas, produtos, carrinho, vendas, autenticacao);
+                        executar(clientes, empresas, produtos, carrinho, vendas, autenticacao);
                     }
                     case 2: {
                         System.out.println();
@@ -114,10 +114,10 @@ public class Main {
                         System.out.println("Saldo Empresa: " + usuarioLogado.getEmpresa().getSaldo());
                         System.out.println("************************************************************");
 
-                        executar(usuarios, clientes, empresas, produtos, carrinho, vendas, autenticacao);
+                        executar(clientes, empresas, produtos, carrinho, vendas, autenticacao);
                     }
                     case 0: {
-                        executar(usuarios, clientes, empresas, produtos, carrinho, vendas, autenticacao);
+                        executar(clientes, empresas, produtos, carrinho, vendas, autenticacao);
 
                     }
                 }
@@ -169,7 +169,7 @@ public class Main {
                         System.out.println("Total: R$" + venda.getValor());
                         System.out.println("************************************************************");
                         carrinho.clear();
-                        executar(usuarios, clientes, empresas, produtos, carrinho, vendas, autenticacao);
+                        executar(clientes, empresas, produtos, carrinho, vendas, autenticacao);
                     }
                     case 2: {
                         System.out.println();
@@ -189,10 +189,10 @@ public class Main {
 
                         });
 
-                        executar(usuarios, clientes, empresas, produtos, carrinho, vendas, autenticacao);
+                        executar(clientes, empresas, produtos, carrinho, vendas, autenticacao);
                     }
                     case 0: {
-                        executar(usuarios, clientes, empresas, produtos, carrinho, vendas, autenticacao);
+                        executar(clientes, empresas, produtos, carrinho, vendas, autenticacao);
 
                     }
 
