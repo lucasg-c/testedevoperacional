@@ -65,7 +65,7 @@ public class Main {
             Usuario usuarioLogado = usuario.get();
 
             System.out.println("Escolha uma opção para iniciar");
-            if (usuarioLogado.IsEmpresa()) {
+            if (usuarioLogado.isEmpresa()) {
                 System.out.println("1 - Listar vendas");
                 System.out.println("2 - Ver produtos");
                 System.out.println("0 - Deslogar");

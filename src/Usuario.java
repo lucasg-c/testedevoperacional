@@ -17,15 +17,15 @@ public class Usuario {
 		this.empresa = empresa;
 	}
 
-	public boolean IsAdmin() {
+	public boolean isAdmin() {
 		return this.empresa == null && this.cliente == null;
 	}
 
-	public boolean IsEmpresa() {
+	public boolean isEmpresa() {
 		return this.empresa != null;
 	}
 
-	public boolean IsCliente() {
+	public boolean isCliente() {
 		return this.cliente != null;
 	}
 
