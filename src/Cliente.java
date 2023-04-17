@@ -1,16 +1,26 @@
 
 public class Cliente {
+	private Integer id;
 	private String cpf;
 	private String nome;
 	private String username;
 	private Integer idade;
 
-	public Cliente(String cpf, String nome, String username, Integer idade) {
+	public Cliente(Integer id, String cpf, String nome, String username, Integer idade) {
 		super();
+		this.id = id;
 		this.cpf = cpf;
 		this.nome = nome;
 		this.username = username;
 		this.idade = idade;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getCpf() {

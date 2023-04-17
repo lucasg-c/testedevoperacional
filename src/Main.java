@@ -23,8 +23,8 @@ public class Main {
         Produto produto9 = new Produto(9, "Croissant", 7, 6.50, empresa);
         Produto produto10 = new Produto(10, "Ché Gelado", 4, 5.50, empresa);
 
-        Cliente cliente = new Cliente("07221134049", "Allan da Silva", "cliente", 20);
-        Cliente cliente2 = new Cliente("72840700050", "Samuel da Silva", "cliente2", 24);
+        Cliente cliente = new Cliente(1, "07221134049", "Allan da Silva", "cliente", 20);
+        Cliente cliente2 = new Cliente(2, "72840700050", "Samuel da Silva", "cliente2", 24);
 
         Usuario usuario1 = new Usuario("admin", "1234", null, null);
         Usuario usuario2 = new Usuario("empresa", "1234", null, empresa);
